@@ -1,8 +1,8 @@
-document.getElementById('heading').innerHTML = localStorage['title'] || 'Just Write';
+document.getElementById('title').innerHTML = localStorage['title'] || 'Just Write';
 document.getElementById('content').innerHTML = localStorage['content'] || 'This text is auto saved';
 
 setInterval(function(){
-    localStorage['title'] = document.getElementById('heading').innerHTML;
+    localStorage['title'] = document.getElementById('title').innerHTML;
     localStorage['content'] = document.getElementById('content').innerHTML;
 }, 1000);
 
@@ -16,14 +16,12 @@ $("#btn_text").click(function(){
           title: localStorage['title'],
           content: localStorage['content'],
     }
-    var logtext = $("#logtext");
-    logtext.text = data.toString();
-    console.log(data);
+    
     $.ajax({
         url: "/postingcms",
         method: "POST",
         success: function(result){
-            alert(result);
+            document.getElementById("logtext").innerHTML = result;
         },
         data: data,
         crossDomain: false, 
