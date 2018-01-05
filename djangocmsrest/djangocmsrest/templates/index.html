@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	{% load staticfiles %}
+<head>
+	<meta charset="utf-8" lang="por">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+	<title>Testando Js</title> 	
+</head>
+<body>
+	<div id="box_text">
+		{% csrf_token %}
+		<div id="heading" contenteditable="true"></div>
+		<div id="content" contenteditable="true"></div>
+	</div>
+	<button id="btn_text">Enviar</button>
+	<div class="caixatexto">
+		<a id="logtext">
+
+		</a>
+
+
+	</div>
+
+	<script src="{% static 'core/js/jquery-3.2.1.js' %}"></script>
+	<script src="{% static 'core/js/app.js' %}"></script>
+		
+</body>
+</html>
