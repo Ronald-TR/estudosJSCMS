@@ -2,12 +2,12 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+ body {
     color: #333;
     font-weight: 100;
-    max-width: 50em;
+    /* max-width: 50em; */
     margin: 0 auto;
-}
+} 
 
 div:focus {
     outline: none;
@@ -24,10 +24,13 @@ div:focus {
 }
 
 #box_text {
-    
+    background-color: rgba(41, 25, 25, 0.658);
 }
-
-.caixatexto {
-    margin: 1%;
-    background-color: rgb(35, 95, 80);
+#dvLogin {
+    background-color: rgb(46, 165, 165);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+#dvLogin h1 {
+    color: bisque;
 }

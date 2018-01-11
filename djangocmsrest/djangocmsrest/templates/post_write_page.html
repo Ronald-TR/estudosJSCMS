@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block body %}
+	<div id="box_text">
+		{% csrf_token %}
+		<div class="container">
+			<div id="title" contenteditable="true"></div>
+			<div id="content" contenteditable="true"></div>
+			<button class="btn btn-success" id="btn_text">Enviar</button>
+		</div>
+	</div>
+	<div class="caixatexto">
+		<a id="logtext">
+		</a>
+	</div>	
+
+{% endblock %}
