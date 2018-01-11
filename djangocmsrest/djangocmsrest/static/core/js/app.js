@@ -41,5 +41,5 @@ $('#btnPosting').click(function(){
 });
 
 $('#btnListing').click(function(){
-    ChangeActionOnSubmit('#frmChoices', '/listagens');
+    ChangeActionOnSubmit('#frmChoices', '/postingcms');
 });
