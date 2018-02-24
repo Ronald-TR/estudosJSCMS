@@ -20,7 +20,7 @@ $("#btn_text").click(function(){
     }
     
     $.ajax({
-        url: "/postingcms",
+        url: "/postlist",
         method: "POST",
         success: function(result){
             document.getElementById("logtext").innerHTML = result;
@@ -35,11 +35,3 @@ function ChangeActionOnSubmit(AformId, Aaction){
     form.action = Aaction;
     form.submit();
 }
-
-$('#btnPosting').click(function(){
-    ChangeActionOnSubmit('#frmChoices', '/postwrite');
-});
-
-$('#btnListing').click(function(){
-    ChangeActionOnSubmit('#frmChoices', '/postingcms');
-});

@@ -10,7 +10,7 @@ def loginpage(request):
 def postwrite(request):
     return render(request, 'post_write_page.html')
 
-def postingcms(request):
+def postlist(request):
     if request.method == 'POST':
         postagem = libutils.safeSerialization(Postagem, request.POST)
         message = 'sucesso ao salvar'

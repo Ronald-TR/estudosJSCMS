@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Simple CMS</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'core/css/style.css' %}" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="{% static 'core/css/style.css' %}" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'core/css/core.css' %}" />
     <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'core/css/bootstrap-grid.min.css' %}">
     <link rel="stylesheet" href="{% static 'core/css/bootstrap-reboot.min.css' %}">
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="{% static 'core/js/ckeditor/ckeditor.js' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand bg-dark navbar-dark" id="navegation-bar">
+    <nav class="navbar navbar-expand navbar-dark" id="navegation-bar">
         <ul class="navbar-nav">
             <li class="nav-item active">
                 <a class="nav-link navbar-brand" href="/">
@@ -28,24 +29,19 @@
                 <a class="nav-link" href="">Cadastrar-se</a>
             </li>
         </ul>
-    
-        <ul class="navbar-nav">
-            <li>aaa</li>
-        </ul>
     </nav>
         
 {% block body %}
-
-<div class="jumbotron">
-    <div class="container">
-        <form id="frmChoices" class="form-control" action="">
-            <button id="btnPosting" class="btn btn-default">Postagem</button>
-            <button id="btnListing" class="btn btn-warning">Listagem</button>
-        </form>
-        
+<div class="conteudo">
+    <div class="">
+        <div class="">
+            <div id="choices" class="" action="">
+                <a href="{% url 'postwrite' %}" >Comece</a>
+                <a href="{% url 'postlist' %}" >Feed</a>
+            </div>
+            
+        </div>        
     </div>
-    
-    
 </div>
 {% endblock %}
 

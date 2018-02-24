@@ -1,2 +1,38 @@
+html, body {height: 100%;}
 
+body {
+    background-image: url('/static/core/imgs/whitehead.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+#choices :nth-child(1){
+    color:rgba(255, 255, 255, 0.726);
+    padding: 0.375rem 0.75rem;
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-radius: 0.35rem;
+    font-size: 1.5em;
+    margin-right: 1%; 
+}
+
+#choices :nth-child(2){
+    color:rgba(255, 255, 255, 0.726);
+    padding: 0.375rem 0.75rem;
+    border-right-style: dotted;
+    border-left-style: dotted;
+    border-radius: 0.35rem;
+    margin-left: 0%;
+    font-size: 1.5em; 
+}
+
+#choices a:link{
+    text-decoration: none;
+}
+
+.conteudo {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 25%;
+}

@@ -5,6 +5,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('postwrite', views.postwrite, name='postwrite'),
     path('loginpage', views.loginpage, name='loginpage'),
-    path('postingcms', views.postingcms, name='postingcms'),
+    path('postlist', views.postlist, name='postlist'),
 
 ]
