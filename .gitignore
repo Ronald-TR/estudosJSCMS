@@ -59,3 +59,4 @@ target/
 #personal ignores
 djangocmsrest/static/
 djangocmsrest/db.sqlite3
+.idea/
