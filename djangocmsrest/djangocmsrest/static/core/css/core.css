@@ -7,32 +7,57 @@ body {
     background-position: center;
 }
 
+
+#choices a:link{ text-decoration: none; }
+#choices a:hover{ opacity: 1; }
+#choices a:focus{ outline: none;}
+#choices { margin-top: 5%; }
+
 #choices :nth-child(1){
-    color:rgba(255, 255, 255, 0.726);
+    color:rgba(255, 255, 255, 1);
     padding: 0.375rem 0.75rem;
     border-top-style: dotted;
     border-bottom-style: dotted;
     border-radius: 0.35rem;
     font-size: 1.5em;
-    margin-right: 1%; 
+    margin-right: 1%;
+    border-color: rgba(255, 255, 255, 0.568);
+
+    opacity: 0.7;
 }
 
 #choices :nth-child(2){
-    color:rgba(255, 255, 255, 0.726);
+    color:rgba(253, 217, 117, 0.76);
     padding: 0.375rem 0.75rem;
     border-right-style: dotted;
     border-left-style: dotted;
     border-radius: 0.35rem;
     margin-left: 0%;
     font-size: 1.5em; 
+    opacity: 0.7;
+    border-color: rgba(251, 255, 0, 0.568);
 }
 
-#choices a:link{
-    text-decoration: none;
-}
 
 .conteudo {
     text-align: center;
     vertical-align: middle;
-    margin-top: 25%;
+    margin-top:12%;
 }
+
+.conteudo { color: rgb(255, 255, 255); }
+.conteudo h4 { opacity: 0.8;}
+
+#dvLogin {
+    margin-top: 10%;
+    vertical-align: middle;
+    text-align: center;
+    color:white;
+}
+
+#dvLogin {
+    padding: 2%;
+    background-color: rgba(138, 87, 185, 0.384);
+}
+
+#dvLogin input{ opacity: 0.8; }
