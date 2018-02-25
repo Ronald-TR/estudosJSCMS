@@ -8,4 +8,5 @@ urlpatterns = [
     path('postlist', views.postlist, name='postlist'),
     path('writerlogin', views.writerlogin, name='writerlogin'),
     path('errorlogin', views.errorlogin, name='errorlogin'),
+    path('cadwriter', views.cadwriter, name='cadwriter'),
 ]

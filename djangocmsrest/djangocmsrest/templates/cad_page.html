@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class="" id="dvLogin">
+    <form action="/writercad" class="form-group" method="POST">
+        <h1>Be a newer Writer!</h1>
+        {% csrf_token %}
+        <div class="row">
+        <div class="input-group col-md-5">
+            <span class="input-group-addon">Name:
+                 <i class="fa fa-black-tie"></i>
+            </span>   
+            <input type="text" class="input-group" placeholder="Seu nome de exibição">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-group col-md-5">
+            <span class="input-group-addon">Username:
+                <i class="fa fa-pencil-alt"></i>
+            </span>
+            <input type="text" class="input-group" placeholder="Seu nome de usuario">
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group col-md-5">
+                <span class="input-group-addon">Password:
+                    <i class="fa fa-briefcase"></i>
+                </span>
+                <input type="password" class="input-group" placeholder="Sua senha">
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group col-md-5">
+                <span class="input-group-addon">Re-Password:
+                    <i class="fa fa-briefcase"></i>
+                </span>
+                <input type="password" class="input-group" placeholder="Confirme sua senha">
+        </div>
+
+    </div>
+        <button type="submit">Go!</button>
+    </form>
+
+
+</div>
+
+{% endblock %}

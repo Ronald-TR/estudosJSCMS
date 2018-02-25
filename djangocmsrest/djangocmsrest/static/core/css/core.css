@@ -53,11 +53,12 @@ body {
     vertical-align: middle;
     text-align: center;
     color:white;
-}
-
-#dvLogin {
     padding: 2%;
     background-color: rgba(138, 87, 185, 0.384);
+}
+#dvLogin div{
+    text-align: center !important;
+    margin: 0 auto !important;
 }
 
 #dvLogin input{ opacity: 0.8; }

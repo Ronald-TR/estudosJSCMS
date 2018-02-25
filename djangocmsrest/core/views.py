@@ -9,7 +9,8 @@ from core.models import *
 import json
 
 
-#def cadaster(request):
+def cadwriter(request):
+    return render(request, 'cad_page.html')
 
 
 def writerlogin(request):
