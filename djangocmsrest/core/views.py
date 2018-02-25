@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
 from django.contrib.auth import authenticate, login, logout, get_user
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import AnonymousUser
 from core import libutils
@@ -10,8 +11,16 @@ import json
 
 
 def cadwriter(request):
+    if request.method == 'POST':
+        writer = Writer()
+        writer.init_from_request(request)
+        writer.save()
+        return redirect('/loginpage')
     return render(request, 'cad_page.html')
-
+    
+def writerlogout(request):
+    logout(request)
+    return redirect('/')
 
 def writerlogin(request):
     username = request.POST.get('username')

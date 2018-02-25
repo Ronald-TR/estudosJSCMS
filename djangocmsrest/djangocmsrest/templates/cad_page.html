@@ -2,8 +2,9 @@
 
 {% block body %}
 
+
 <div class="" id="dvLogin">
-    <form action="/writercad" class="form-group" method="POST">
+    <form action="/cadwriter" class="form-group" method="POST">
         <h1>Be a newer Writer!</h1>
         {% csrf_token %}
         <div class="row">
@@ -11,7 +12,7 @@
             <span class="input-group-addon">Name:
                  <i class="fa fa-black-tie"></i>
             </span>   
-            <input type="text" class="input-group" placeholder="Seu nome de exibição">
+            <input name="displayname" required type="text" class="input-group" placeholder="Seu nome de exibição">
         </div>
     </div>
 
@@ -20,7 +21,7 @@
             <span class="input-group-addon">Username:
                 <i class="fa fa-pencil-alt"></i>
             </span>
-            <input type="text" class="input-group" placeholder="Seu nome de usuario">
+            <input name="username" required type="text" class="input-group" placeholder="Seu nome de usuario">
         </div>
     </div>
     <div class="row">
@@ -28,7 +29,7 @@
                 <span class="input-group-addon">Password:
                     <i class="fa fa-briefcase"></i>
                 </span>
-                <input type="password" class="input-group" placeholder="Sua senha">
+                <input id="password" name="password" required type="password" class="input-group" placeholder="Sua senha">
         </div>
     </div>
     <div class="row">
@@ -36,7 +37,7 @@
                 <span class="input-group-addon">Re-Password:
                     <i class="fa fa-briefcase"></i>
                 </span>
-                <input type="password" class="input-group" placeholder="Confirme sua senha">
+                <input oninput="validacao_senha(this)" type="password" required class="input-group" placeholder="Confirme sua senha">
         </div>
 
     </div>
@@ -45,5 +46,14 @@
 
 
 </div>
-
+<script>
+function validacao_senha(pass_confirm){
+    if (pass_confirm.value != document.getElementById("password").value){
+        pass_confirm.setCustomValidity("Senhas diferem, redigite os campos");
+    
+    }else {
+        pass_confirm.setCustomValidity("");
+    }
+}
+</script>
 {% endblock %}

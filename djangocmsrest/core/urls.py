@@ -9,4 +9,5 @@ urlpatterns = [
     path('writerlogin', views.writerlogin, name='writerlogin'),
     path('errorlogin', views.errorlogin, name='errorlogin'),
     path('cadwriter', views.cadwriter, name='cadwriter'),
+    path('writerlogout', views.writerlogout, name='writerlogout')
 ]
