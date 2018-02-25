@@ -6,5 +6,6 @@ urlpatterns = [
     path('postwrite', views.postwrite, name='postwrite'),
     path('loginpage', views.loginpage, name='loginpage'),
     path('postlist', views.postlist, name='postlist'),
-
+    path('writerlogin', views.writerlogin, name='writerlogin'),
+    path('errorlogin', views.errorlogin, name='errorlogin'),
 ]

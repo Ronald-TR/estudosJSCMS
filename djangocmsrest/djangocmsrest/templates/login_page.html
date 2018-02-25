@@ -5,17 +5,17 @@
 <div id="dvLogin">
     <div class="container col-md-5">
         <h1>Login</h1>
-        <form class="form-group">
+        <form class="form-group" onsubmit="POST" action="{% url 'writerlogin' %}">
             <div class="input-group">
                 <span class="input-group-addon">@</span>
-                <input class="form-control" type="text" placeholder="Username">
+                <input class="form-control" type="text" placeholder="Username" name="username">
             </div>
 
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                <input class="form-control" type="password" placeholder="Password">
+                <input class="form-control" type="password" placeholder="Password" name="password">
             </div>
-            
+            <button class="">start</button>
             
         </form>
     </div>

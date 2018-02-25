@@ -1,8 +1,27 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
-from core.models import *
-import json
+from django.contrib.auth import authenticate, login, logout, get_user
+from django.contrib.auth.decorators import login_required
 from core import libutils
+from core.models import *
+
+import json
+
+
+def writerlogin(request):
+    username = request.POST.get('username')
+    password = request.POST.get('password')
+    writeruser = authenticate(request, username=username, password=password)
+
+    if writeruser is not None:
+        login(request, writeruser)
+        return redirect('/postwrite')
+    else:
+        return redirect('/errorlogin')
+
+def errorlogin(request):
+    return render(request, 'error_login.html')
+
 
 def loginpage(request):
     return render(request, 'login_page.html')
