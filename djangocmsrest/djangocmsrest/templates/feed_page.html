@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block body %}
+
+{% load to_tag %}
+{% autoescape off %}
+    <div class="" id="feed">
+        <h1>Feed</h1>
+        {% for post in posts %}
+        <div class="container">
+            <h3>Editor: {{ post.writter.nome_publico }} </h3>
+            <div id="feed_item">
+                {{ post.textdata|to_tag }}
+            </div>
+            <br>
+            <h6>Criado em: {{ post.postdata }}</h6>
+        </div>
+    {% endfor %}
+    </div>
+{% endautoescape %}
+    
+
+
+
+
+
+{% endblock %}

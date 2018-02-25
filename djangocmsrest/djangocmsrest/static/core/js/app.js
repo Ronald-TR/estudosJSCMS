@@ -23,7 +23,7 @@ $("#btn_text").click(function(){
         url: "/postsave",
         method: "POST",
         success: function(result){
-             console.log(result);
+             alert(result);
         },
         data: data,
         crossDomain: false, 

@@ -55,11 +55,19 @@ def postwrite(request):
         return render(request, 'error_page.html', error)
     return render(request, 'post_write_page.html')
 
+@login_required
 def postsave(request):
     if request.method == 'POST':
-        postagem = request.POST.get('text') # libutils.safeSerialization(Postagem, request.POST)
-        print(postagem)
-    return HttpResponse(postagem)
+        post = PostWritten()
+        post.init_from_request(request)
+        post.save()
+        return HttpResponse('Sucesso ao salvar!')
+    return HttpResponse('')
+
+def postfeed(request):
+    # writter = Writer.objects.get(user=get_user(request))
+    postagens = PostWritten.objects.all()
+    return render(request, 'feed_page.html', {'posts': postagens})
 
 
 def index(request):
