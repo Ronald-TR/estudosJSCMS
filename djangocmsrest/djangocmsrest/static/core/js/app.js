@@ -11,19 +11,19 @@ setInterval(function(){
 }, 1000);
 */
 $("#btn_text").click(function(){
-    var token = $("#box_text").children()[1-1]; // fiz isso pois a tecla zero esta quebrada
+    
+    var token = $("#boxcontent").children()[0];
     var tokenname = token.name;
+    
     var data = {
           csrfmiddlewaretoken: token.value,
-          title: localStorage['title'],
-          content: localStorage['content'],
+          text: CKEDITOR.instances.box_text.getData(),
     }
-    
     $.ajax({
-        url: "/postlist",
+        url: "/postsave",
         method: "POST",
         success: function(result){
-            document.getElementById("logtext").innerHTML = result;
+             console.log(result);
         },
         data: data,
         crossDomain: false, 

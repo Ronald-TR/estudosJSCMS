@@ -5,14 +5,14 @@
 		<form id="boxcontent">
 		{% csrf_token %}
 			<textarea name="box_text" id="box_text" cols="30" rows="10"></textarea>
-			<script>
-					CKEDITOR.replace( 'box_text' );
-			</script>
+
 		</form>
-		<button class="btn btn-success" id="btn_text">Enviar</button>
+		<button type="submit" class="btn btn-success" id="btn_text">Enviar</button>
 	</div>
 	<!-- <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script> -->
-
+	<script>
+			CKEDITOR.replace( 'box_text' );
+	</script>
 
 
 {% endblock %}

@@ -55,17 +55,11 @@ def postwrite(request):
         return render(request, 'error_page.html', error)
     return render(request, 'post_write_page.html')
 
-def postlist(request):
+def postsave(request):
     if request.method == 'POST':
-        postagem = libutils.safeSerialization(Postagem, request.POST)
-        message = 'sucesso ao salvar'
-        try:
-            postagem.save()
-        except Exception as e:
-            message = e    
-        return HttpResponse(message)
-    postcount = json.dumps({'postcount': Postagem.objects.all().count()})
-    return HttpResponse(postcount)
+        postagem = request.POST.get('text') # libutils.safeSerialization(Postagem, request.POST)
+        print(postagem)
+    return HttpResponse(postagem)
 
 
 def index(request):
